@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1 ">
+  <title>{% block title %} {% endblock %}</title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bootstrap.min.css')}}">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="border-bottom: solid; border-color: #A7D129; border-width: 5px; background-color: #000000; color: white;">
+    <a class="navbar-brand" href="/">KELOMPOK-7 (21TK-02)</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+       <li class="nav-item">
+        <a class="nav-link" href="/">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/cari/">Data_Customer</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/add/">Data_Mobil</a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="/namboon/">Penyewaan</a>
+     </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/daftar/">Data_Transaksi</a>
+    </li>
+  </ul>
+</div>
+</nav>
+{% block content %} {% endblock %}
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="{{url_for('static', filename='bootstrap.bundle.min.js')}}"></script>
+</body>
+</html>
